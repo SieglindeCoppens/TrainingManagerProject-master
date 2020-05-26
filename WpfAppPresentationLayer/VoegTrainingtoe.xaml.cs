@@ -20,7 +20,7 @@ namespace WpfAppPresentationLayer
     /// </summary>
     public partial class VoegTrainingtoe : Window
     {
-        private TrainingManager m = new TrainingManager(new UnitOfWork(new TrainingContextTest(false)));
+        private TrainingManager m = new TrainingManager(new UnitOfWork(new TrainingContextTest(true)));
         public VoegTrainingtoe()
         {
             InitializeComponent();
@@ -46,7 +46,7 @@ namespace WpfAppPresentationLayer
             if (SecondenTextBox.Text == "")
                 aantalSeconden = 0;
             else
-                aantalSeconden = int.Parse(MinuutTextBox.Text);
+                aantalSeconden = int.Parse(SecondenTextBox.Text);
             TimeSpan ts = new TimeSpan(aantalUur, aantalMinuten, aantalSeconden);
 
             float? snelheid;

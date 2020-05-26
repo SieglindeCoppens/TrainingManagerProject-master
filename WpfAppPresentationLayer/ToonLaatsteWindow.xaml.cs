@@ -13,16 +13,13 @@ using System.Windows.Shapes;
 namespace WpfAppPresentationLayer
 {
     /// <summary>
-    /// Interaction logic for ToonTrainingen.xaml
+    /// Interaction logic for ToonLaatsteWindow.xaml
     /// </summary>
-    public partial class ToonTrainingen : Window
+    public partial class ToonLaatsteWindow : Window
     {
-        public ToonTrainingen()
+        public ToonLaatsteWindow()
         {
             InitializeComponent();
-            
         }
-
     }
-
 }

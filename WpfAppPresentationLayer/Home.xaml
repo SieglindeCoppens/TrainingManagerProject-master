@@ -10,11 +10,11 @@
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="20"/>
             <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="20"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
             <RowDefinition Height="40"/>
@@ -23,6 +23,7 @@
         <TextBlock Grid.Column="1" Grid.Row="1" FontSize="20" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"
                    Grid.ColumnSpan="2" Text="Training manager"/>
         <Button x:Name="naarToevoegenButton" Content="Voeg een training toe" Grid.Column="1" Grid.Row="2" Margin="10" Click="naarToevoegenButton_Click"></Button>
-        <Button x:Name="naarTonenButton" Grid.Column="2" Grid.Row="2" Margin="10" Content="Toon trainingen" Click="naarTonenButton_Click"></Button>
+        <Button x:Name="naarMaandTonenButton" Grid.Column="1" Grid.Row="3" Margin="10" Content="Toon trainingen van een maand" Click="naarTonenButton_Click"></Button>
+        <Button x:Name="naarLaatsteTonenButton" Grid.Column="1" Grid.Row="4" Margin="10" Content="Toon laatste trainingen" Click="naarLaatsteTonenButton_Click"></Button>
     </Grid>
 </Window>

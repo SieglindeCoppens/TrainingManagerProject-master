@@ -30,8 +30,13 @@ namespace WpfAppPresentationLayer
 
         private void naarTonenButton_Click(object sender, RoutedEventArgs e)
         {
-            ToonTrainingen tt = new ToonTrainingen();
+            ToonMaandTrainingen tt = new ToonMaandTrainingen();
             tt.Show();
+        }
+
+        private void naarLaatsteTonenButton_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }
