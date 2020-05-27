@@ -408,10 +408,5 @@ namespace DomainLibrary.Domain.Tests
             Assert.Fail("The expected exception was not thrown");
         }
 
-        [TestMethod()]
-        public void GenerateMonthlyCyclingReportTest()
-        {
-            Assert.Fail();
-        }
     }
 }

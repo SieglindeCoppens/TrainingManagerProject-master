@@ -14,11 +14,11 @@ namespace DataLayer
         public UnitOfWork(TrainingContext context)
         {
             this.context = context;
-            CyclingTrainings = new CyclingRepository(context);
+            CyclingTrainings = new Repositories.CyclingRepository(context);
             RunningTrainings = new RunningRepository(context);
         }
 
-        public ICyclingRepository CyclingTrainings { get; private set; }
+        public DomainLibrary.Repositories.ICyclingRepository CyclingTrainings { get; private set; }
 
         public IRunningRepository RunningTrainings { get; private set; }
 

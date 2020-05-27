@@ -6,11 +6,51 @@
         xmlns:local="clr-namespace:WpfAppPresentationLayer"
         mc:Ignorable="d"
         Title="ToonLaatsteWindow" Height="450" Width="800">
+    <Window.Resources>
+        <Style TargetType="TextBox">
+            <Setter Property="Height" Value="20"/>
+            <Setter Property="Margin" Value="5,0,5,0"/>
+        </Style>
+        <Style TargetType="StackPanel">
+            <Setter Property="Margin" Value="10"/>
+        </Style>
+        <Style TargetType="Label">
+            <Setter Property="Margin" Value="5"/>
+        </Style>
+        <Style TargetType="ComboBox">
+            <Setter Property="Height" Value="25"/>
+        </Style>
+    </Window.Resources>
     <Grid>
-        <StackPanel Orientation="Horizontal" Grid.Row="2" Grid.Column="1">
-            <TextBlock x:Name="tblToonLaatste" Text="Toon laatste"></TextBlock>
-            <TextBox x:Name="tbAantalTrainingen" Width="40"></TextBox>
-            <TextBlock x:Name="tblTrainingen" Text="trainingen"></TextBlock>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="20"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="20"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="30"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+        <TextBlock Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" FontSize="20" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Center"
+                   Text="Toon trainingen" Margin="10"/>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="1">
+            <TextBlock Text="Geef laatste" Margin="0,10,0,10" ></TextBlock>
+            <TextBox x:Name="tbAantal" Width="30"></TextBox>
+            <TextBlock Text="trainingen" Margin="0,10,0,10"></TextBlock>
         </StackPanel>
+        <StackPanel Margin="10" Grid.Column="2" Grid.Row="2" Grid.RowSpan="2">
+            <RadioButton x:Name="rbEnkelFiets" Checked="rbEnkelFiets_Checked" >Fietstrainingen</RadioButton>
+            <RadioButton x:Name="rbEnkelLoop">Looptrainingen</RadioButton>
+        </StackPanel>
+        <Button x:Name="btnToon" Content="Toon" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" Height="30" Click="btnToon_Click"></Button>
+        <DataGrid x:Name="dgLaatsteTrainingen" IsReadOnly="False" Grid.Row="6" Grid.ColumnSpan="2" Grid.Column="1"></DataGrid>
     </Grid>
 </Window>

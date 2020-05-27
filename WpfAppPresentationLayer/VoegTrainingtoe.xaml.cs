@@ -20,7 +20,7 @@ namespace WpfAppPresentationLayer
     /// </summary>
     public partial class VoegTrainingtoe : Window
     {
-        private TrainingManager m = new TrainingManager(new UnitOfWork(new TrainingContextTest(true)));
+        private TrainingManager m = new TrainingManager(new UnitOfWork(new TrainingContext()));
         public VoegTrainingtoe()
         {
             InitializeComponent();
@@ -67,7 +67,16 @@ namespace WpfAppPresentationLayer
             }
             else
             {
-                int distance = int.Parse(afstandInKm.Text);
+                float? distance;
+                if(afstandInKm.Text == "")
+                {
+                    distance = null;
+                }
+                else
+                {
+                    distance = float.Parse(afstandInKm.Text);
+                }
+                    
                 BikeType bt = (BikeType)bikeType.SelectedItem;
 
                 int? wattage;

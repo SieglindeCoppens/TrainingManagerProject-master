@@ -36,7 +36,8 @@ namespace WpfAppPresentationLayer
 
         private void naarLaatsteTonenButton_Click(object sender, RoutedEventArgs e)
         {
-
+            ToonLaatsteWindow tlw = new ToonLaatsteWindow();
+            tlw.Show();
         }
     }
 }
